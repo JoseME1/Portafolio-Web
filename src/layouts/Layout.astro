@@ -128,4 +128,16 @@ const { title } = Astro.props;
     scrollbar-width: thin;
     scrollbar-color: var(--line) var(--container);
   }
+
+  /* Forzar que la imagen de poster ocupe el 100% del contenedor sin deformarse */
+.video-js .vjs-poster {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.video-js .vjs-poster img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>
