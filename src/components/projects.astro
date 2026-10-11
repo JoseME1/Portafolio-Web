@@ -8,22 +8,24 @@ interface Project {
   poster?: string;     // Opcional: captura estática o poster
   link?: string;
   status: string;
+  aspectRatio?: string;
 }
 
 const projects: Project[] = [
   {
     title: "Tiro Libre",
     description: "Página web con temática del Mundial 2026",
-    video: "https://github.com/tu-usuario/mi-portafolio/releases/download/v0.1.0-media/demo-proyecto1.mp4",
-    poster: "https://placehold.co/600x400/1a1a1a/ffffff?text=Tiro+Libre",
-    link: "https://github.com/tu-usuario/proyecto-1",
+    video: "https://github.com/JoseME1/Portafolio-Web/releases/download/video2/Demo.TiroLibre.mp4",
+    poster: "/DemoTiroLibre.png",
+    link: "https://github.com/JoseME1/PIA-INTERFAZ-GABRIEL-NADIA",
     status: "Prototipo",
   },
   {
     title: "Playball",
     description: "Aplicación móvil sobre baseball hecha en Unity con capacidades de Realidad Aumentada. ",
-    video: "https://github.com/tu-usuario/mi-portafolio/releases/download/v0.1.0-media/demo-proyecto2.mp4",
-    poster: "https://placehold.co/600x400/1a1a1a/ffffff?text=Aplicacion+Privada",
+    video: "https://github.com/JoseME1/Portafolio-Web/releases/download/video4/DemoPlayBall.mp4",
+    poster: "/DemoPlayBall.jpg",
+    aspectRatio: "16:9",
     status: "En desarrollo",
   },
   {
@@ -31,13 +33,14 @@ const projects: Project[] = [
     description: "Rediseño en Figma de página web e-commerce de GamePlanet",
     video: "https://github.com/JoseME1/Portafolio-Web/releases/download/video1/Demo.GamePlanet.mp4",
     poster: "/DemoGamePlanet.png",
+    link: "https://www.figma.com/site/xy03Rl1008sPj8vmSWpbHp/GamePlanet-IyUx?t=jXjMaIe1rDeydB9A-0",
     status: "Rediseño",
   },
   {
     title: "Reconocimientos Wizard",
     description: "Aplicación multiplataforma para la creación e impresión masiva de constancias y reconocimientos.",
-    video: "https://github.com/tu-usuario/mi-portafolio/releases/download/v0.1.0-media/demo-proyecto2.mp4",
-    poster: "https://placehold.co/600x400/1a1a1a/ffffff?text=Aplicacion+Privada",
+    video: "https://github.com/JoseME1/Portafolio-Web/releases/download/video3/DemoReconocimientosWizard.mp4",
+    poster: "/DemoReconocimientosWizard.png",
     status: "Colaborador",
   }
 ];
@@ -56,6 +59,7 @@ const projects: Project[] = [
             controls: true,
             responsive: true,
             fluid: true,
+            aspectRatio: project.aspectRatio || "16:9",
             poster: project.poster,
             sources: [
               {
